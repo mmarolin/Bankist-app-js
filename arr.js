@@ -66,4 +66,23 @@ movements.forEach(function (mov, i, arr) {
     console.log(`Movement ${i + 1}. You withdrew ${Math.abs(mov)}€.`);
   }
 });
+
+const currencies = new Map([
+  ['USD', 'United States dollar'],
+  ['EUR', 'Euro'],
+  ['GBP', 'Pound sterling'],
+]);
+
+currencies.forEach(function (value, key, map) {
+  console.log(`${key}: ${value}`);
+});
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+//SET
+const currenciesUnique = new Set(['USD', 'GBP', 'USD', 'GBP', 'EUR', 'EUR']);
+
+currenciesUnique.forEach(function (value, _, map) {
+  console.log(`${value}: ${value}`);
+});
 */
