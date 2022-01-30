@@ -77,7 +77,7 @@ currencies.forEach(function (value, key, map) {
   console.log(`${key}: ${value}`);
 });
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
 
 //SET
 const currenciesUnique = new Set(['USD', 'GBP', 'USD', 'GBP', 'EUR', 'EUR']);
@@ -85,4 +85,21 @@ const currenciesUnique = new Set(['USD', 'GBP', 'USD', 'GBP', 'EUR', 'EUR']);
 currenciesUnique.forEach(function (value, _, map) {
   console.log(`${value}: ${value}`);
 });
+
+//FILTER
+
+const deposits = movements.filter(mov => mov > 0);
+console.log(deposits);
+
+const withdrawals = movements.filter(mov => mov < 0);
+console.log(withdrawals);
 */
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+console.log(movements);
+
+const balance = movements.reduce(function (acc, cur, i, arr) {
+  console.log(`Iteration ${i}: ${acc}`);
+  return acc + cur;
+}, 0);
+console.log(balance);
