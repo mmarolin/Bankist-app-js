@@ -93,7 +93,7 @@ console.log(deposits);
 
 const withdrawals = movements.filter(mov => mov < 0);
 console.log(withdrawals);
-*/
+
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 console.log(movements);
@@ -103,3 +103,12 @@ const balance = movements.reduce(function (acc, cur, i, arr) {
   return acc + cur;
 }, 0);
 console.log(balance);
+
+//MAX value
+const max = movements.reduce((acc, mov) => {
+  if (acc > mov) return acc;
+  else return mov;
+}, movements[0]);
+
+console.log(max);
+*/
