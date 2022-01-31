@@ -140,4 +140,46 @@ const account = accounts.find(acc => acc.owner === 'Jessica Davis');
 console.log(account);
 
 
+
+
+//FLAT METHOD
+const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
+console.log(arr.flat());
+
+const arrDeep = [[[1, [2]], 3], [4, [5, 6]], 7, 8];
+console.log(arrDeep.flat(2));
+
+const overallBalance = accounts
+  .map(acc => acc.movements)
+  .flat()
+  .reduce((acc, mov) => acc + mov, 0);
+
+console.log(overallBalance);
+
+//FLATMAP METHOD
+const overallBalance2 = accounts
+  .flatMap(acc => acc.movements)
+  .reduce((acc, mov) => acc + mov, 0);
+
+console.log(overallBalance2);
+
+//SORTING ARRAYS
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+//Strings
+const owners = ['Matija', 'Marko', 'Adam', 'Marta'];
+console.log(owners.sort());
+
+//Numbers
+//Ascending
+movements.sort((a, b) => {
+  if (a > b) return 1;
+  if (b > a) return -1;
+});
+console.log(movements);
+movements.sort((a, b) => a - b);
+console.log(movements);
+
+//Descending
+movements.sort((a, b) => b - a);
+console.log(movements);
 */
