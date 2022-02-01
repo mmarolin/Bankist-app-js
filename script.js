@@ -302,7 +302,6 @@ btnLoan.addEventListener('click', function (e) {
 });
 
 let sorted = false;
-
 btnSort.addEventListener('click', function (e) {
   e.preventDefault();
 
